@@ -16,8 +16,8 @@ player2 = random.randint(1,6)
 player3 = random.randint(1,6)
 
 print (f"Player 1 rolled: {player1}")
-print (f"Player 1 rolled: {player2}")
-print (f"Player 1 rolled: {player3}")
+print (f"Player 2 rolled: {player2}")
+print (f"Player 3 rolled: {player3}")
 
 maximum = max(player1, player2, player3)
 
