@@ -22,3 +22,10 @@ print (f"Player3 Rolled: {player3}")
 
 # Set highest roll
 highestRoll = 0
+
+# if 1 player has the highest roll
+
+# check if player 2 greater than player 1 and 3 
+if (player2 > player1 and player2 > player3):
+    highestRoll = player2
+    print (f"Player2 had the highest roll with: {highestRoll}")
