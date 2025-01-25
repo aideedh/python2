@@ -29,3 +29,11 @@ highestRoll = 0
 if (player2 > player1 and player2 > player3):
     highestRoll = player2
     print (f"Player2 had the highest roll with: {highestRoll}")
+# check if player 3 greater than player 1 and 2
+elif (player3 > player1 and player3 > player2):
+    highestRoll = player3
+    print (f"Player3 had the highest roll with: {highestRoll}")
+# check if player 1 greater than player 2 and 3
+elif (player1 > player2 and player1 > player3):
+    highestRoll = player1
+    print (f"Player1 had the highest roll with: {highestRoll}")
