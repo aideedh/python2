@@ -11,9 +11,9 @@ applicable. Give screenshots of the code, output and git repository containing t
 
 import random
 
-player1 = random.ranint(1,6)
-player2 = random.ranint(1,6)
-player3 = random.ranint(1,6)
+player1 = random.randint(1,6)
+player2 = random.randint(1,6)
+player3 = random.randint(1,6)
 
 print (f"Player 1 rolled: {player1}")
 print (f"Player 1 rolled: {player2}")
