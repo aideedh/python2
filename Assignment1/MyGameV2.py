@@ -10,10 +10,15 @@ applicable. Give screenshots of the code, output and git repository containing t
 
 import random
 
-player1 = random.randint(1,6)
-player2 = random.randint(1,6)
-player3 = random.randint(1,6)
+# assign a random value to all three players
+player1 = random.randint(1, 6)
+player2 = random.randint(1, 6)
+player3 = random.randint(1, 6)
 
-print (f"Player 1 rolled: {player1}")
-print (f"Player 2 rolled: {player2}")
-print (f"Player 3 rolled: {player3}")
+# print statments for rolls
+print (f"Player1 Rolled: {player1}")
+print (f"Player2 Rolled: {player2}")
+print (f"Player3 Rolled: {player3}")
+
+# Set highest roll
+highestRoll = 0
