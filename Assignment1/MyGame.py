@@ -21,7 +21,10 @@ print (f"Player 1 rolled: {player1}")
 print (f"Player 2 rolled: {player2}")
 print (f"Player 3 rolled: {player3}")
 
-# Set highest roll
-highestRoll = 0
+# find the max roles
+maximum = max(player1, player2, player3)
+
+# print the higest role
+print(f"The highest roll was: {maximum}")
 
 
