@@ -9,3 +9,18 @@ the highest value. Print that highest value. Use comments and import statements 
 applicable. Give screenshots of the code, output and git repository containing this program.
 """
 
+import random
+
+player1 = random.ranint(1,6)
+player2 = random.ranint(1,6)
+player3 = random.ranint(1,6)
+
+print (f"Player 1 rolled: {player1}")
+print (f"Player 1 rolled: {player2}")
+print (f"Player 1 rolled: {player3}")
+
+maximum = max(player1, player2, player3)
+
+print(f"The highest roll was: {maximum}")
+
+
