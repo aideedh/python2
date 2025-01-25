@@ -11,16 +11,17 @@ applicable. Give screenshots of the code, output and git repository containing t
 
 import random
 
+# assign a random value to all three players
 player1 = random.randint(1,6)
 player2 = random.randint(1,6)
 player3 = random.randint(1,6)
 
+# print statments for rolls
 print (f"Player 1 rolled: {player1}")
 print (f"Player 2 rolled: {player2}")
 print (f"Player 3 rolled: {player3}")
 
-maximum = max(player1, player2, player3)
-
-print(f"The highest roll was: {maximum}")
+# Set highest roll
+highestRoll = 0
 
 
