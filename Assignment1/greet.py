@@ -18,11 +18,13 @@ print (f"Good Morning {name}") # or print("Good Morning" + str(name))
 
 #for loop
 name = input("What is your name: ")
-for loop in range(1,4):
+# this will loop from 1 to 3 
+for loop in range(1,4): 
     print("Good Morning " + str(name))
 
 # While loop
 count = 1
+# starts at 1 and counts till 3 and than stops
 name = input("What is your name: ")
 while count <= 3:
     print ("Good morning", (name))
