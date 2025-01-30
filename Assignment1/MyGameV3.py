@@ -37,4 +37,27 @@ for rolls in range (1,3):
     print(f"Player2 Roll #{rolls} - Score = {rollPlayer2}")
     print(f"Player3 Roll #{rolls} - Score = {rollPlayer3}")
 
+print("---------------------------")
+print(f"Player1 - Score = {rollPlayer1}")
+print(f"Player2 - Score = {rollPlayer2}")
+print(f"Player3 Roll #{rolls} - Score = {rollPlayer3}")
+
 # calculate avgs 
+
+average1= (scorePlayer1+ scorePlayer2+scorePlayer3)/3  # average using  ‘/’ operator
+average2= (scorePlayer1+scorePlayer2+scorePlayer3)//3 # average using ‘//’ operator
+
+# Remove the parenthesis from the equations and print average1 and average2 
+
+average4= scorePlayer1+scorePlayer2+scorePlayer3/3  # average using  ‘/’ operator
+average5= scorePlayer1+scorePlayer2+scorePlayer3//3 # average using ‘//’ operator
+
+# print the avgs
+print("---------------------------")
+print(" ") # this is a blank space
+print("Average of roll 1 + roll 2:")
+print(" ") # this is a blank space
+print(f"average using  ‘/’ operator: {average1}")
+print(f"average using ‘//’ operator: {average2}")
+print(f"average using  ‘/’ operator - without (): {average4}")
+print(f"average using ‘//’ operator - without (): {average5}")
