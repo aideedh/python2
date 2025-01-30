@@ -24,7 +24,7 @@ for loop in range(1,4):
 
 # While loop
 count = 1
-# starts at 1 and counts till 3 and than stops
+# starts at 1 and counts till 3 and than stops 
 name = input("What is your name: ")
 while count <= 3:
     print ("Good morning", (name))
