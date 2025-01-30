@@ -7,3 +7,10 @@ the highest value. Print that highest value. Use comments and import statements 
 Give screenshots of the code, output and git repository containing this program.
 
 # '''
+
+import random
+
+# assign a random value to all three players
+player1 = random.randint(1, 6)
+player2 = random.randint(1, 6)
+player3 = random.randint(1, 6)
