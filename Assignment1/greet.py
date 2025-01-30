@@ -21,7 +21,8 @@ Explain your logic. Create a version2 of this problem in your git repository.
 
 #or 
 
-count = 0
+count = 1
 name = input("What is your name: ")
 while count <= 3:
     print ("Good morning", (name))
+    count+=1
