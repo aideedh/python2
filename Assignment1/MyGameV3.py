@@ -37,10 +37,11 @@ for rolls in range (1,3):
     print(f"Player2 Roll #{rolls} - Score = {rollPlayer2}")
     print(f"Player3 Roll #{rolls} - Score = {rollPlayer3}")
 
+# Get totak score of each player
 print("---------------------------")
-print(f"Player1 - Score = {rollPlayer1}")
-print(f"Player2 - Score = {rollPlayer2}")
-print(f"Player3 Roll #{rolls} - Score = {rollPlayer3}")
+print(f"Player1 - Total Score = {scorePlayer1}")
+print(f"Player2 - Total Score = {scorePlayer2}")
+print(f"Player3 - Total Score = {scorePlayer3}")
 
 # calculate avgs 
 
