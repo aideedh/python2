@@ -1,21 +1,19 @@
 '''
-Write a  program in python to simulate a game called MyGame.py. 
-In this game you will use three variables called player1, player2 and player3. 
-Each player rolls a dice, which means that the variables are initialized with random 
-integers ranging from 1 to 6. Compare the values of player1, player2 and player3 to find
-the highest value. Print that highest value. Use comments and import statements wherever applicable. 
-Give screenshots of the code, output and git repository containing this program.
+2.Use of Arithmetic Operators and Git repositories
+Implement the following as version2 of problem 1 given in this document.
+Suppose all players in problem1 roll the dice two times.  
+The score of each player is the sum of the previous and current value on the dice. 
+The program should print the highest score. Use comments and import statements wherever applicable. 
+Provide screenshots of the code,  output and git repository
 
 # '''
 
 import random
 
-# assign a random value to all three players
-player1 = random.randint(1, 6)
-player2 = random.randint(1, 6)
-player3 = random.randint(1, 6)
+# set up intial scores
+scorePlayer1 = 0
+scorePlayer2 = 0
+scorePlayer3 = 0
 
-# print statments for rolls
-print (f"Player1 Rolled: {player1}")
-print (f"Player2 Rolled: {player2}")
-print (f"Player3 Rolled: {player3}")
+# use a for loop to loop the amount of rolls "2"
+for rolls in range (1,3): 
