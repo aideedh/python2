@@ -14,3 +14,8 @@ import random
 player1 = random.randint(1, 6)
 player2 = random.randint(1, 6)
 player3 = random.randint(1, 6)
+
+# print statments for rolls
+print (f"Player1 Rolled: {player1}")
+print (f"Player2 Rolled: {player2}")
+print (f"Player3 Rolled: {player3}")
