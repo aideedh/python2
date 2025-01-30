@@ -10,3 +10,31 @@ again.
 Give screenshots of the code, outputs and the git repository
 
 '''
+
+import random
+
+# set up intial scores
+scorePlayer1 = 0
+scorePlayer2 = 0
+scorePlayer3 = 0
+
+# use a for loop to loop the amount of rolls "2"
+for rolls in range (1,3): 
+
+    # Randint will change every loop 
+    rollPlayer1 = random.randint(1,6)
+    rollPlayer2 = random.randint(1,6)
+    rollPlayer3 = random.randint(1,6)
+
+    # update the scores for every roll
+    scorePlayer1+=rollPlayer1
+    scorePlayer2+=rollPlayer2
+    scorePlayer3+=rollPlayer3
+
+    # print the score each roll
+    print("---------------------------")
+    print(f"Player1 Roll #{rolls} - Score = {rollPlayer1}")
+    print(f"Player2 Roll #{rolls} - Score = {rollPlayer2}")
+    print(f"Player3 Roll #{rolls} - Score = {rollPlayer3}")
+
+# calculate avgs 
