@@ -25,6 +25,7 @@ highestRoll = 0
 
 # if 1 player has the highest roll
 
+
 # check if player 2 greater than player 1 and 3 
 if (player2 > player1 and player2 > player3):
     highestRoll = player2
@@ -37,3 +38,21 @@ elif (player3 > player1 and player3 > player2):
 elif (player1 > player2 and player1 > player3):
     highestRoll = player1
     print (f"Player1 had the highest roll with: {highestRoll}")
+
+
+# Tie between 2 players
+# Note: It will check if 2 players are tied and if the 3rd player is not higher than the other 2 
+# Basically checks if t scores are equal and if the 3rd score is not higher than both those score than tie
+
+# if player 1 and 2 tie
+elif (player1 == player2 and player3 < player1 and player3 < player2):
+    highestRoll = player1
+    print (f"Player 1 and 2 tied with the highest roll of: {highestRoll}")
+# if player 1 and 3 tie
+elif (player1 == player3 and player2 < player1 and player2 < player3):
+    highestRoll = player1
+    print (f"Player 1 and 3 tied with the highest roll of: {highestRoll}")
+# if player 2 and 3 tie
+elif (player2 == player3 and player1 < player2 and player1 < player3):
+    highestRoll = player2
+    print (f"Player 2 and 3 tied with the highest roll of: {highestRoll}")
