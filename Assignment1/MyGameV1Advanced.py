@@ -25,7 +25,6 @@ highestRoll = 0
 
 # if 1 player has the highest roll
 
-
 # check if player 2 greater than player 1 and 3 
 if (player2 > player1 and player2 > player3):
     highestRoll = player2
@@ -56,3 +55,9 @@ elif (player1 == player3 and player2 < player1 and player2 < player3):
 elif (player2 == player3 and player1 < player2 and player1 < player3):
     highestRoll = player2
     print (f"Player 2 and 3 tied with the highest roll of: {highestRoll}")
+
+# Tie between 3 players 
+
+else: 
+    highestRoll = player1
+    print (f"All 3 players have tied the highest roll is: {highestRoll}")
