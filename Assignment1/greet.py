@@ -8,13 +8,20 @@ Explain your logic. Create a version2 of this problem in your git repository.
  Give screenshots of the code, outputs and the git repository
 '''
 
-#v1
+# #v1
 
+# name = input("What is your name: ")
+# print (f"Good Morning {name}") # or print("Good Morning" + str(name))
+
+# #v2
+
+# name = input("What is your name: ")
+# for loop in range(1,4):
+#     print("Good Morning" + str(name))
+
+#or 
+
+count = 0
 name = input("What is your name: ")
-print (f"Good Morning {name}") # or print("Good Morning" + str(name))
-
-#v2
-
-
-for loop in range(1,4):
-    print("Good Morning" + str(name))
+while count <= 3:
+    print ("Good morning", (name))
