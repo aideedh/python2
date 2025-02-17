@@ -28,3 +28,9 @@ def tempCheck():
     elif temper < 100:
         print("Temperature:", temper)
         print("Temperature is not very high")
+
+# Loop to run the program x amount of times 
+for loop in range (1, 4):
+    print("--------------------------------")
+    tempCheck()
+print("--------------------------------")
