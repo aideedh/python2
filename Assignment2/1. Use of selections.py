@@ -34,3 +34,6 @@ for loop in range (1, 4):
     print("--------------------------------")
     tempCheck()
 print("--------------------------------")
+
+# problems with this program, it doesnt account for anything if the temprature is 100 as its only 
+# checking if its bellow or above 100 
