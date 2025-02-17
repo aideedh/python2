@@ -30,12 +30,15 @@ def stdDeviation(list):
 
 def sumSqDiff(list):
    
-   # set up formula variables 
-    average = Avg(list)                    # average - from avg function
+   # average - from avg function
+    average = Avg(list)
 
-    ssd = 0                                # ssd = sum(xi - average)^2         
-    for xi in list:                        # set intial value to zero 
-        total = (xi - average)**2            # than calculate formula for each element
+    # ssd = sum(xi - average)^2
+    # set intial value to zero 
+    # than calculate formula for each element
+    ssd = 0           
+    for xi in list:                         
+        total = (xi - average)**2          
         ssd+=total
 
     return ssd
@@ -62,8 +65,15 @@ def Avg(list):
     return (total / count)
 
 
-# test avg
-myList = [1,2,3,4]
-print(Avg(myList))
-print(sumSqDiff(myList))
-print(stdDeviation(myList))
+# set up list()
+#myList = [1,2,3,4]
+
+myList = []
+for number in range [1,5]:
+    ans = int(input("Input Number: "))
+    myList.append = ans
+
+
+print(f"Average: {Avg(myList)}")
+print(f"Sum of Squared Differences: {sumSqDiff(myList)}")
+print(f"Standard Deviation: {stdDeviation(myList)}")
