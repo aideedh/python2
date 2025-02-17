@@ -6,20 +6,24 @@
 # Use any loop of you choice. Student must provide a flowchart for this program
 
 
-def Grade():
+def Grade(list):
+    # needs to have list parameter to pass any list rather than pre defined list
+    # paramters make functions flexable
     
-    average = Avg(scores)
+    average = Avg(list)
 
     if average > 80:
-        print("Grade: A")
+        grade = "A"
     elif average > 70 and average < 80 :
-        print("Grade: B")
+        grade = "B"
     elif average > 60 and average < 70 :
-        print("Grade: C")
+        grade = "C"
     elif average > 50 and average < 60 :
-        print("Grade: D")
+        grade = "D"
     else:
-        print("Grade: D")
+        grade = "F"
+
+    return grade
 
 
 def Avg(list):
@@ -38,5 +42,6 @@ def Avg(list):
 
 
 scores = [96,90,82,92,76,64,75,81,90,72]
+scores2 = [50,55,60,65,70,75,80,85,90,95]
 
-print(Grade())
+print("Grade:", Grade(scores))
