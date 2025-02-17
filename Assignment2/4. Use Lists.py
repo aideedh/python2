@@ -6,8 +6,7 @@
 # and the average. sumSqDiff() implements this formula ssd
 
 
-
-
+# refrence - https://www.w3schools.com/python/python_lists.asp
 
 import math
 
@@ -25,7 +24,6 @@ def stdDeviation(list):
     stdDevi = math.sqrt((sumSqDiff(list)/count))
     
     return stdDevi
-
 
 
 def sumSqDiff(list):
@@ -72,6 +70,7 @@ print("------------------------")
 
 # set up list()
 #myList = [1,2,3,4]
+# make user input
 myList = []
 for loop in range (1,5):
     ans = int(input("Input Number: "))
