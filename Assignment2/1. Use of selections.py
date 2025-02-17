@@ -6,3 +6,14 @@
 # For temper lower than 100 the program prints “ temperature is not very high”. 
 # Flowchart is required in this program. 
 # Student should also suggest what are some of the weaknesses in this problem
+
+import random
+
+def tempCheck():
+    temper = random.randint(1,400)
+    
+    if temper > 100:
+        if temper > 320:
+            print("")
+    else:
+        print("")
