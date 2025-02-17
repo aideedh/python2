@@ -14,9 +14,18 @@ def huhu():
         num = int(input("Enter a number: "))
 
         if num >= 0:
-            # implement logic for if number is greater than 0 
-            count+=1
-            sum+=num  # sum of all positive user inputs
+            if num % 11 == 0:
+                continue
+
+            else:
+                # implement logic for if number is greater than 0 
+                count+=1
+                sum+=num  # sum of all positive user inputs
+
+        elif num == 991534460:
+            print("cutoff point")
+            break
+
         else:
             # implement logic if number is negative / less than 0 
             print("Sorry, only numbers >= 0 are Allowed!")
