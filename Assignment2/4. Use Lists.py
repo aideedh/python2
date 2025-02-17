@@ -9,11 +9,16 @@
 def sumSqDiff(list):
    
    # set up formula variables 
-    for number in list:
+    for number in list:       # xi - yes
         xi = number
-    avgAllItems = Avg()
 
-    ssd = xi - avgAllItems
+    average = Avg()           # average - from avg function
+
+    n = 0                     # n / count -  Total num of elements
+    for number in list():
+        n+=1
+
+    ssd = xi - average        # ssd - Calculation
 
 
 
