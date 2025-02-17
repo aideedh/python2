@@ -13,14 +13,16 @@ def huhu():
         # user input in while loop
         num = int(input("Enter a number: "))
 
-    
+        # check if its student number
         if num == 991534460:
             print("cutoff point")
             break
 
+        # check if user input is multiple of 11
         elif num % 11 == 0:
             print("Sorry multiplea of 11 are skipped!")
 
+        #  if numbers above doesnt trigger this continues
         elif num >= 0:
 
             # implement logic for if number is greater than 0 
