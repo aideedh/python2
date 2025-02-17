@@ -34,14 +34,15 @@ def Avg(list):
         total+=number
     # get amount of elements in list
     elements = len(list)
-
+    # calculate average
     score = (total/elements)
     
     return score
 
 
-
+# Random list of grades for 2 students
 scores = [96,90,82,92,76,64,75,81,90,72]
-scores2 = [50,55,60,65,70,75,80,85,90,95]
+scores2 = [43,30,7,51,24,40,86,44,84,43]
 
-print("Grade:", Grade(scores))
+print("Student 1 - Grade:", Grade(scores), "Average:", Avg(scores))
+print("Student 2 - Grade:", Grade(scores2), "Average:", Avg(scores2))
