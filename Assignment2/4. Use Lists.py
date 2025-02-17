@@ -6,20 +6,29 @@
 # and the average. sumSqDiff() implements this formula ssd
 
 
+
+
+
+import math
+
 def sumSqDiff(list):
    
    # set up formula variables 
     for number in list:       # xi - yes
         xi = number
 
-    average = Avg()           # average - from avg function
+    average = Avg(list)           # average - from avg function
 
     n = 0                     # n / count -  Total num of elements
-    for number in list():
+    for number in list:
         n+=1
 
-    ssd = xi - average        # ssd - Calculation
+    ssd = (xi - average)**2       # ssd - Calculation
+    
+    stdDeviation = math.sqrt((ssd/n))
 
+    print(stdDeviation)
+    return ssd
 
 
 def Avg(list):
@@ -46,3 +55,5 @@ def Avg(list):
 # test avg
 myList = [1,2,3,4]
 print(Avg(myList))
+myList = [1,2,3,4]
+print(sumSqDiff(myList))
