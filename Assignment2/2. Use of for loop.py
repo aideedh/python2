@@ -27,5 +27,4 @@ def calcMagnitude():
     return math.sqrt(x**2+y**2+z**2)
 
 
-print(calcMagnitude())
-# print("The magintude of the vector is:",  calcMagnitude())
+print("The magintude of the vector is:",  str(calcMagnitude()))
