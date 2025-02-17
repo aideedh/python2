@@ -10,7 +10,17 @@ def calcMagnitude():
     # or x = y = z = 1
 
     for loop in range (1,4):
+        # will loop this 3 times 
         ans = int(input("Please enter a number"))
 
-        if ans == 1:
+        # first loop, it will assign value to x
+        if loop == 1:
             x = ans
+        # second loop, it will assign value to y
+        elif loop == 2:
+            y = ans
+        # last loop, it will assign value to z
+        else:
+            z = ans
+
+        
