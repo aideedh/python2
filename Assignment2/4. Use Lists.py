@@ -11,19 +11,33 @@
 
 import math
 
+
+def stdDeviation(list):
+
+    count = 0
+
+    # count number of elements in list
+    for number in list:
+        count+=1
+    
+
+pass
+
+
 def sumSqDiff(list):
    
    # set up formula variables 
+    average = Avg(list)                    # average - from avg function
 
-    average = Avg(list)           # average - from avg function
+    ssd = 0                                # ssd = sum(xi - average)^2         
+    for xi in list:                        # set intial value to zero 
+        sum = (xi - average)**2            # than calculate formula for each element
+        ssd+=sum
 
-    n = 0                     # n / count -  Total num of elements
+    n = 0                                  # n / count -  Total num of elements
     for number in list:
         n+=1
-    
-    stdDeviation = math.sqrt((ssd/n))
 
-    print(stdDeviation)
     return ssd
 
 
