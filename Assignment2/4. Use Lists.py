@@ -7,10 +7,18 @@
 
 
 
+
+
+
+
 def Avg(list):
 
     sum = 0
     count = 0
+
+    # Thinking:
+    # list passed as a paramenter
+    # so the sum of the list must be done than divided by count of list
 
     for number in list:
         # calculate sum of nums in list
@@ -24,5 +32,6 @@ def Avg(list):
     return (sum / count)
 
 
+myList = [1,2,3,4]
 
-
+print(Avg(myList))
