@@ -20,11 +20,16 @@ def huhu():
         else:
             # implement logic if number is negative / less than 0 
             print("Sorry, only numbers >= 0 are Allowed!")
-            print("Terminating ... .. .")
+            print("Terminating ..... ... .. .")
             break
 
     # loop termination logic 
-
+    print("-------------------------------")
     print("Total loop iterations:", count)
 
-    return 
+    return sum  
+
+# call function and than print information 
+print("Sum of all positive numbers:", huhu())
+print("-------------------------------")
+
