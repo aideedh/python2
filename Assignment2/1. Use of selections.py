@@ -12,8 +12,14 @@ import random
 def tempCheck():
     temper = random.randint(1,400)
     
+    # if temp is above 100
     if temper > 100:
+        # this will be blank ( due to nested if )
         if temper > 320:
-            print("")
+            # if temp above 320 bellow will print
+            print ("Temperature:", temper)
+            print ("Temperature above smoke point")
     else:
-        print("")
+        # if temp is not above 320 it will use else
+        print ("Temperature:", temper)
+        print("Temperature above boling point!")
