@@ -1,6 +1,8 @@
 # Write a program that uses for loop to calculate the magnitude of a vector, where all dimensions (x,y,z)  
 # of the vector are integers entered by the user. Flowchart is required in this program.
 
+import math
+
 def calcMagnitude():
 
     # set variables to default value so it will still run
@@ -11,7 +13,7 @@ def calcMagnitude():
 
     for loop in range (1,4):
         # will loop this 3 times 
-        ans = int(input("Please enter a number"))
+        ans = int(input("Please enter a number: "))
 
         # first loop, it will assign value to x
         if loop == 1:
@@ -22,5 +24,8 @@ def calcMagnitude():
         # last loop, it will assign value to z
         else:
             z = ans
+    return math.sqrt(x**2+y**2+z**2)
 
-        
+
+print(calcMagnitude())
+# print("The magintude of the vector is:",  calcMagnitude())
