@@ -12,9 +12,12 @@
 #     print (f"{x} x {times} = {test}" )
 
 
+ans = int(input("Number of rows: "))
 
-for rows in range (1,5):
+for rows in range(1, ans+1):
+
+    space = ans - rows
     if rows % 2 != 0:
-        print ("+"*rows)
+        print (" "*(space), "+"*rows)
     else:
-        print ("-"*rows)
+        print (" "*(space), "-"*rows)
