@@ -14,16 +14,12 @@ import math
 def sumSqDiff(list):
    
    # set up formula variables 
-    for number in list:       # xi - yes
-        xi = number
 
     average = Avg(list)           # average - from avg function
 
     n = 0                     # n / count -  Total num of elements
     for number in list:
         n+=1
-
-    ssd = (xi - average)**2       # ssd - Calculation
     
     stdDeviation = math.sqrt((ssd/n))
 
