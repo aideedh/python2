@@ -18,6 +18,6 @@ for rows in range(1, ans+1):
 
     space = ans - rows
     if rows % 2 != 0:
-        print (" "*(space), "+"*rows)
+        print (" "*(space) + ("+"*((rows*2)-1)))
     else:
-        print (" "*(space), "-"*rows)
+        print (" "*(space) + ("-"*((rows*2)-1)))
