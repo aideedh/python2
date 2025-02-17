@@ -3,4 +3,14 @@
 
 def calcMagnitude():
 
+    x = 1
+    y = 1 
+    z = 1 
+
+    # or x = y = z = 1
+
     for loop in range (1,4):
+        ans = int(input("Please enter a number"))
+
+        if ans == 1:
+            x = ans
