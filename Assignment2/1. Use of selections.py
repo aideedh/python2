@@ -19,7 +19,12 @@ def tempCheck():
             # if temp above 320 bellow will print
             print ("Temperature:", temper)
             print ("Temperature above smoke point")
-    else:
-        # if temp is not above 320 it will use else
-        print ("Temperature:", temper)
-        print("Temperature above boling point!")
+        else:
+            # if temp is not above 320 it will use else
+            print ("Temperature:", temper)
+            print("Temperature above boling point!")
+
+    # if temp is bellow 100
+    elif temper < 100:
+        print("Temperature:", temper)
+        print("Temperature is not very high")
