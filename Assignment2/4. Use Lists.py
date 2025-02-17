@@ -65,13 +65,18 @@ def Avg(list):
     return (total / count)
 
 
+# program start
+print("------------------------")
+print("Please Enter 4 integers")
+print("------------------------")
+
 # set up list()
 #myList = [1,2,3,4]
-
 myList = []
-for number in range [1,5]:
+for loop in range (1,5):
     ans = int(input("Input Number: "))
-    myList.append = ans
+    myList.append(ans)
+print("------------------------")
 
 
 print(f"Average: {Avg(myList)}")
