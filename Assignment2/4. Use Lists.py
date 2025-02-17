@@ -9,12 +9,20 @@
 
 def Avg(list):
 
-    # Thinking:
-    # list passed as a paramenter
-    # so the sum of the list must be done than divided by count of list
+    sum = 0
+    count = 0
 
     for number in list:
-        # for loop to calc the sum of the list
-        
+        # calculate sum of nums in list
+        sum+=number
+
+    for number in list:
+        # count amount of nums in list
+        count+=1
+
+    # calculate the Average
+    return (sum / count)
+
+
 
 
