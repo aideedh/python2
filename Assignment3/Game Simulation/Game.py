@@ -7,8 +7,7 @@ class Game():
         self.guess = guess
 
     def start(self):
-        self.guess = Player.roll()
-        return self.guess
+
 
     def match(self):
 
