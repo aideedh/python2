@@ -26,7 +26,6 @@ for _ in range(4):
     myturtle.right(90)
 
 
-# Connect corners to form the cube illusion
 myturtle.penup()
 myturtle.right(45)
 myturtle.backward(50)
