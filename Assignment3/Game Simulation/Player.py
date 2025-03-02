@@ -2,9 +2,8 @@ import random
 
 class Player():
 
-    def __init__(self, scores):
-        self.scores = scores
-
+    def __init__(self):
+        self.scores = 0
 
     def roll(self):
         roll = random.randint(1,6)
