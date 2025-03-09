@@ -28,36 +28,30 @@ class Game:
     def guess(self):
         guess = random.randint(1,6)
         return guess
- 
-
-    # def match(self):
-    #     if self.players.roll() == self.players.guess():
-    #         self.players.updateScore(1)
-    #         print(f"{self.players} has matched, +1 point!")
-    #     else:
-    #         print("No one has matched! +0 points")
-
 
     def match(self):
         
         # itterate over every player
-
+        
         for player in self.players:
 
             roll = player.roll()
-            guess = player.guess()
+            roundGuess = self.guess()
 
-            if roll == guess:
+            # than check if players roll matched guess
+            if roll == roundGuess:
                 player.updateScore(1)
                 print(f"{self.players} has matched, +1 point!")
-            else:
-                print("No one has matched! +0 points")
+
+        
+
+
 
 
     def getPlayerScore(self):
         # so this is to get the score of each player in list
         for players in self.players:
-            return f"{self.name} - Score: {players.playerScore()}"
+            print (f"{players.name} - Score: {players.playerScore()}")
 
 class Application:
 
