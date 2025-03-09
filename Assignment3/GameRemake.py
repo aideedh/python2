@@ -39,4 +39,15 @@ class Game:
         return self.players.playersScore()
 
 class Application:
-    pass
+
+    gameStart = Game()
+    playerOne = Player()
+    playerTwo = Player()
+    playerThree = Player()
+    gameStart.addPlayers(playerOne)
+    gameStart.addPlayers(playerTwo) 
+    gameStart.addPlayers(playerThree)
+
+    for loop in range(5):
+
+        print(gameStart.players.roll())
