@@ -1,4 +1,6 @@
 
+import random
+
 class Player:
 
     def __init__(self):
@@ -9,6 +11,10 @@ class Player:
 
     def playersScore(self):
         return self.score
+    
+    def roll(self):
+        diceRoll = random.randint(1,6)
+        return diceRoll
 
 class Game:
     
@@ -17,6 +23,20 @@ class Game:
 
     def addPlayers(self, players):
         self.players.append(players)
+
+    def guess(self):
+        playerGuess = random.randint(1,6)
+        return playerGuess
+ 
+    def match(self):
+        if self.players.roll() == self.players.guess():
+            self.players.updateScore(1)
+            print(f"{self.players} has matched, +1 point!")
+        else:
+            print("No one has matched! +0 points")
+
+    def getPlayerScore(self):
+        return self.players.playersScore()
 
 class Application:
     pass
