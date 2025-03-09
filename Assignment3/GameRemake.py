@@ -7,8 +7,16 @@ class Player:
     def updateScore(self, addScore):
         self.score += addScore
 
+    def playersScore(self):
+        return self.score
+
 class Game:
-    pass
+    
+    def __init__(self):
+        self.players = []
+
+    def addPlayers(self, players):
+        self.players.append(players)
 
 class Application:
     pass
