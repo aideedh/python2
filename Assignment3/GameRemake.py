@@ -32,7 +32,7 @@ class Game:
     def match(self):
         
         # itterate over every player
-        
+
         for player in self.players:
 
             roll = player.roll()
@@ -41,10 +41,11 @@ class Game:
             # than check if players roll matched guess
             if roll == roundGuess:
                 player.updateScore(1)
-                print(f"{self.players} has matched, +1 point!")
-
-        
-
+                print(f"{player.name} has matched, +1 point!")
+            
+            else:
+                print("No one won!")
+                break
 
 
 
@@ -64,6 +65,11 @@ class Application:
     gameStart.addPlayers(playerThree)
 
     for loop in range(5):
+        print(f"Staring round {loop}:")
         gameStart.match()
+        
+    print("------------------")
+    print("Final Scores")
+    print("------------------")
 
     gameStart.getPlayerScore()
