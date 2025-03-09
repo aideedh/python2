@@ -26,8 +26,8 @@ class Game:
         self.players.append(players)
 
     def guess(self):
-        playerGuess = random.randint(1,6)
-        return playerGuess
+        guess = random.randint(1,6)
+        return guess
  
 
     # def match(self):
@@ -48,26 +48,28 @@ class Game:
             guess = player.guess()
 
             if roll == guess:
-                
-
-
+                player.updateScore(1)
+                print(f"{self.players} has matched, +1 point!")
+            else:
+                print("No one has matched! +0 points")
 
 
     def getPlayerScore(self):
         # so this is to get the score of each player in list
         for players in self.players:
-            return players.playerScore()
+            return f"{self.name} - Score: {players.playerScore()}"
 
 class Application:
 
     gameStart = Game()
-    playerOne = Player()
-    playerTwo = Player()
-    playerThree = Player()
+    playerOne = Player("playerOne")
+    playerTwo = Player("playerTwo")
+    playerThree = Player("playerThree")
     gameStart.addPlayers(playerOne)
     gameStart.addPlayers(playerTwo) 
     gameStart.addPlayers(playerThree)
 
-    # for loop in range(5):
+    for loop in range(5):
+        gameStart.match()
 
-    #     print(gameStart.players.roll())
+    gameStart.getPlayerScore()
