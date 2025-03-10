@@ -118,3 +118,14 @@ class Player:
         self.score += score
 
 
+class Game:
+    
+    def __init__(self):
+        self.players = [
+            Player("playerOne", 0),
+            Player("playerTwo", 0),
+            Player("playerThree", 0)
+        ]
+        self.guess = int
+
+
