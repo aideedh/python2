@@ -15,13 +15,19 @@ class Account:
     def withdraw(self, amount):
         
         if self.accountType == "chequing":
-            overdraft = self.currentBalance - amount
-            if overdraft < -1000:
+
+            overdraft = -1000
+
+            overdraftProtection = self.currentBalance - amount
+            if overdraftProtection < overdraft:
                 print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
             else:
                 self.currentBalance -= amount
                 print(f"Withdrawal successful!")
                 print(f"New balance: {self.currentBalance}")
+
+        elif self.accountType == "savings":
+            
 
 
 

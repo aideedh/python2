@@ -133,3 +133,21 @@ class Game:
         self.guess = random.randint(1,6)
         return self.guess
         
+    def match(self):
+
+        check = False
+
+        for player in self.players:
+
+            guess = self.start()
+            roll = player.roll()
+
+            if roll == guess:
+                player.updateScore(1)
+                print(f"{player.name} has matched, +1 point!")
+                check = True
+                continue
+                
+        if check == False:
+                print(f"No one won!")                
+
