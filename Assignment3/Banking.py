@@ -1,8 +1,10 @@
 
 class Person:
-    pass
-
-
+    
+    # is a relationshiop
+    def __init__(self, name, account):
+        self.name = name
+        self.accountType = account
 
 
 class Account:
