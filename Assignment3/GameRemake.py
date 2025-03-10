@@ -129,3 +129,7 @@ class Game:
         self.guess = int
 
 
+    def start(self):
+        self.guess = random.randint(1,6)
+        return self.guess
+        
