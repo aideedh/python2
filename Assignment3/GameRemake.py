@@ -100,4 +100,21 @@ This was uses an instance of an object within another object
 
 '''
 
+import random
+
+class Player:
+    
+    def __init__(self, name, score=0):
+        self.name = name
+        self.score = score
+    
+    def roll(self):
+        return random.randint(1,6)
+    
+    def playerScore(self):
+        return self.score
+    
+    def updateScore(self, score):
+        self.score += score
+
 
