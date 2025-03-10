@@ -46,5 +46,11 @@ class Savings(Account):
         super.__init__(currentBalance)
 
 
+    # add the profit method
+    def profit(self):
+        profit = self.currentBalance * 0.15
+        self.currentBalance += profit
+
+
 accountOne = Account("chequing", 600)
 Adam = Person("Adam", accountOne)
