@@ -1,4 +1,13 @@
 
+'''
+
+Object passed to another object using method:
+------------------------------------------------
+This way is using addplayers(self, player) method to pass object to object
+
+'''
+
+
 import random
 
 class Player:
@@ -80,3 +89,15 @@ class Application:
     print("Final Scores")
     print("------------------")
     gameStart.getPlayerScore()
+
+
+
+'''
+
+Object is an instance of another object:
+------------------------------------------------
+This was uses an instance of an object within another object
+
+'''
+
+

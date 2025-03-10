@@ -1,4 +1,10 @@
 
+class Person:
+    pass
+
+
+
+
 class Account:
     
     def __init__(self, accountType, minBalance, currentBalance):
@@ -14,13 +20,15 @@ class Account:
                 print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
             else:
                 self.currentBalance -= amount
-                print(self.currentBalance)
+                print(f"Withdrawal successful!")
+                print(f"New balance: {self.currentBalance}")
 
 
 
 
 class Chequing(Account):
-    pass
+    super.withdraw(self)
+
 
 class Savings(Account):
     pass
