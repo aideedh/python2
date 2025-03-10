@@ -6,6 +6,13 @@ class Person:
         self.name = name
         self.account = account
 
+"""
+Note to self:
+Inheritance means to remove the need for unseesary code
+When it says child class inherits parent methods, it means the child class 
+can reuse the metods of the parent class with out needed to copy and paste code
+"""
+
 
 class Account:
     
