@@ -120,6 +120,7 @@ class Player:
 
 class Game:
     
+    # object init with instance of another classes - object
     def __init__(self):
         self.players = [
             Player("playerOne", 0),
@@ -135,6 +136,7 @@ class Game:
         
     def match(self):
 
+        # Bool for if any player matched
         check = False
 
         for player in self.players:
@@ -147,7 +149,30 @@ class Game:
                 print(f"{player.name} has matched, +1 point!")
                 check = True
                 continue
-                
+        
+        # if no player matched whan this will print during the round
         if check == False:
                 print(f"No one won!")                
 
+    def showScores(self):
+        
+        for players in self.players:
+            print (f"{players.name} - Score: {players.playerScore()}")
+
+class application:
+    
+    # instnce of game object
+    game = Game()
+
+    # loop the amount of time game will be played
+    for loop in range(1,6):
+        print("------------------")
+        print(f"Staring round {loop}:")
+        game.match()
+    
+    # Display final results
+    print("------------------")
+    print("Final Scores")
+    print("-----------------------")
+    game.showScores()
+    print("-----------------------")
