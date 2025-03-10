@@ -9,10 +9,11 @@ class Person:
 
 class Account:
     
-    def __init__(self, accountType, minBalance, currentBalance):
+    def __init__(self, accountType, currentBalance, minBalance=500):
         self.accountType = accountType
-        self.minBalance = minBalance 
         self.currentBalance = currentBalance
+        self.minBalance = minBalance 
+
 
     def withdraw(self, amount):
         
@@ -52,8 +53,16 @@ class Account:
 
 
 class Chequing(Account):
-    pass
 
+    def __init__(self, accountType, currentBalance, minBalance=500):
+        super.__init__(self, accountType, currentBalance, minBalance)
+        super().withdraw()
+        super().deposit()
 
 class Savings(Account):
-    pass
+
+    def __init__(self, accountType, currentBalance, minBalance=500):
+        super.__init__(self, accountType, currentBalance, minBalance)
+        super().withdraw()
+        super().deposit()
+        
