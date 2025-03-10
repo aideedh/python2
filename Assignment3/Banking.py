@@ -9,42 +9,54 @@ class Person:
 
 class Account:
     
-    def __init__(self, accountType, currentBalance, minBalance=500):
+    def __init__(self, accountType, currentBalance, minBalance=500, overdraft = 0):
         self.accountType = accountType
         self.currentBalance = currentBalance
-        self.minBalance = minBalance 
+        self.minBalance = minBalance
+        self.overdraft = overdraft
 
 
     def withdraw(self, amount):
         
-        if self.accountType == "chequing":
+        print("-Trying to Withdraw-")
 
-            overdraft = -1000
+        if self.currentBalance - amount > self.overdraft:
+            print("Sorry, your overdraft limit {self.overdraft} has been exceeded")
+        else:
+            self.currentBalance -= amount
+            print(f"Withdrawl Successful - Updated Balance {self.currentBalance}")
 
-            overdraftProtection = self.currentBalance - amount
-            if overdraftProtection < overdraft:
-                print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
-                overdraft +=200
-                print("overdraft limit increased by 200")
 
-            else:
-                self.currentBalance -= amount
-                print(f"Withdrawal successful!")
-                print(f"New balance: {self.currentBalance}")
+            # this  is redundant logic ignore this just for future refrence
 
-        elif self.accountType == "savings":
+        # if self.accountType == "chequing":
 
-            overdraft = -1200
+        #     overdraft = -1000
 
-            overdraftProtection = self.currentBalance - amount
-            if overdraftProtection < overdraft:
-                print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
-                overdraft +=200
-                print("overdraft limit increased by 200")
-            else:
-                self.currentBalance -= amount
-                print(f"Withdrawal successful!")
-                print(f"New balance: {self.currentBalance}")
+        #     overdraftProtection = self.currentBalance - amount
+        #     if overdraftProtection < overdraft:
+        #         print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
+        #         overdraft +=200
+        #         print("overdraft limit increased by 200")
+
+        #     else:
+        #         self.currentBalance -= amount
+        #         print(f"Withdrawal successful!")
+        #         print(f"New balance: {self.currentBalance}")
+
+        # elif self.accountType == "savings":
+
+        #     overdraft = -1200
+
+        #     overdraftProtection = self.currentBalance - amount
+        #     if overdraftProtection < overdraft:
+        #         print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
+        #         overdraft +=200
+        #         print("overdraft limit increased by 200")
+        #     else:
+        #         self.currentBalance -= amount
+        #         print(f"Withdrawal successful!")
+        #         print(f"New balance: {self.currentBalance}")
 
 
     def deposit(self, amount):
@@ -54,15 +66,16 @@ class Account:
 
 class Chequing(Account):
 
-    def __init__(self, accountType, currentBalance, minBalance=500):
-        super.__init__(self, accountType, currentBalance, minBalance)
-        super().withdraw()
-        super().deposit()
+    def __init__(self, currentBalance):
+        super.__init__(currentBalance)
+        self.overdraft = -1000
+
 
 class Savings(Account):
 
-    def __init__(self, accountType, currentBalance, minBalance=500):
-        super.__init__(self, accountType, currentBalance, minBalance)
-        super().withdraw()
-        super().deposit()
-        
+    def __init__(self, currentBalance):
+        super.__init__(currentBalance)
+
+
+accountOne = Account("chequing", 600)
+Adam = Person("Adam", accountOne)
