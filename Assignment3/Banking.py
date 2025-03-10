@@ -4,7 +4,7 @@ class Person:
     # is a relationshiop
     def __init__(self, name, account):
         self.name = name
-        self.accountType = account
+        self.account = account
 
 
 class Account:
@@ -46,10 +46,13 @@ class Account:
                 print(f"New balance: {self.currentBalance}")
 
 
+    def deposit(self, amount):
+        self.currentBalance += amount
+
 
 
 class Chequing(Account):
-    super.withdraw(self)
+    pass
 
 
 class Savings(Account):
