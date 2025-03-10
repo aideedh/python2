@@ -20,48 +20,17 @@ class Account:
         
         print("-Trying to Withdraw-")
 
-        if self.currentBalance - amount > self.overdraft:
+        if self.currentBalance - amount < -self.overdraft:
             print("Sorry, your overdraft limit {self.overdraft} has been exceeded")
+            self.overdraft += 200
         else:
             self.currentBalance -= amount
             print(f"Withdrawl Successful - Updated Balance {self.currentBalance}")
 
 
-            # this  is redundant logic ignore this just for future refrence
-
-        # if self.accountType == "chequing":
-
-        #     overdraft = -1000
-
-        #     overdraftProtection = self.currentBalance - amount
-        #     if overdraftProtection < overdraft:
-        #         print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
-        #         overdraft +=200
-        #         print("overdraft limit increased by 200")
-
-        #     else:
-        #         self.currentBalance -= amount
-        #         print(f"Withdrawal successful!")
-        #         print(f"New balance: {self.currentBalance}")
-
-        # elif self.accountType == "savings":
-
-        #     overdraft = -1200
-
-        #     overdraftProtection = self.currentBalance - amount
-        #     if overdraftProtection < overdraft:
-        #         print(f"Sorry you have exceeded overdraft limit by : {overdraft}")
-        #         overdraft +=200
-        #         print("overdraft limit increased by 200")
-        #     else:
-        #         self.currentBalance -= amount
-        #         print(f"Withdrawal successful!")
-        #         print(f"New balance: {self.currentBalance}")
-
-
     def deposit(self, amount):
         self.currentBalance += amount
-
+        print(f"${amount} Deposit Successful - Updated Balance: {self.currentBalance}")
 
 
 class Chequing(Account):
