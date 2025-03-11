@@ -29,7 +29,15 @@ myturtle.right(45)
 myturtle.forward(50)
 
 
+# Reposition to the bottom left corner  of first sq
+myturtle.left(45)
+myturtle.forward(100)
+myturtle.right(90)
+myturtle.forward(100)
 
+# draw sq behind front sq
+myturtle.right(135)
+myturtle.forward(50)
 
 
 

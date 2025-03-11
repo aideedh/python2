@@ -139,9 +139,12 @@ class Game:
         # Bool for if any player matched
         check = False
 
-        for player in self.players:
+        # this needs to be here otherwise it will generate a new guess for every player
+        # now its the same guess every match 
+        guess = self.start()
 
-            guess = self.start()
+        for player in self.players:
+            # every player rolls a different number
             roll = player.roll()
 
             if roll == guess:
