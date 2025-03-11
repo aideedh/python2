@@ -1,5 +1,7 @@
 import turtle
 
+# this program will make a cube
+
 screen = turtle.Screen()
 screen.bgcolor("aqua")
 
