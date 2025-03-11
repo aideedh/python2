@@ -38,6 +38,10 @@ myturtle.forward(100)
 # draw sq behind front sq
 myturtle.right(135)
 myturtle.forward(50)
+myturtle.right(45)
+myturtle.forward(100)
+myturtle.right(135)
+myturtle.forward(50)
 
 
 
