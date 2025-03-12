@@ -119,7 +119,25 @@ class Player:
 
 
 class Game:
-    
+  
+    """
+    so I finally understood what making an attribute player list meant
+
+    self.player = [
+                stuff in list 
+    ]
+
+    can also do something like this   
+
+    def __init__(self, player = [])
+        self.players = players
+
+    - this would need to pass values when creating game or using an add player method 
+
+    def addPlayer(self, player)
+        self.player.append(player)
+    """
+
     # object init with instance of another classes - object
     def __init__(self):
         self.players = [
@@ -162,20 +180,30 @@ class Game:
         for players in self.players:
             print (f"{players.name} - Score: {players.playerScore()}")
 
-class application:
+class Application:
     
-    # instnce of game object
-    game = Game()
+    # made this whole thing a method so that i could use it in the uml diagram 
 
-    # loop the amount of time game will be played
-    for loop in range(1,6):
+    def playGame(self):
+
+        # instnce of game object
+        game = Game()
+
+        # loop the amount of time game will be played
+        for loop in range(1,6):
+            print("------------------")
+            print(f"Starting round {loop}:")
+            game.match()
+        
+        # Display final results
         print("------------------")
-        print(f"Staring round {loop}:")
-        game.match()
-    
-    # Display final results
-    print("------------------")
-    print("Final Scores")
-    print("-----------------------")
-    game.showScores()
-    print("-----------------------")
+        print("Final Scores")
+        print("-----------------------")
+        game.showScores()
+        print("-----------------------")
+
+
+# make instace of application 
+# (program that run everything)
+app = Application()
+app.playGame()
