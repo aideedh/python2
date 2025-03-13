@@ -82,35 +82,70 @@ class Application:
         print("Welcme to the banking app!")
         print("--------------------------")
 
-        # get all info for Account Type 
-
+        # choose account type
         accountType = int(input("What is your accountType: 1. Chequing or 2. Savings"))
         if accountType == 1 or accountType == "Chequing":
             print("Chequing Account Choosen:")
-            currentBalance = int("What is your starting balance - minimun 500: ")                   
+
+            # set starting balance
+            currentBalance = int("What is your starting balance - minimun 500: ")    
+
+            # create Chequing class instance               
             chequingAccount = Chequing(currentBalance)
 
+            # create Person class instance
             name = str(input("Choose your account name"))
+            person = Person(name, chequingAccount)
+
+
+            # do banking stuff
+            while True:
+
+                print("What would you like to do?")
+                ans = input ("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. Exit")
+                if ans == 1:
+                    person.account.showBalance()
+                    continue
+                elif ans == 2:
+                    person.account.showActType()
+                    continue
+                elif ans == 3:
+                    person.account.withdraw()
+                    continue
+                elif ans == 4:
+                    person.account.deposit()
+                    continue
+                elif ans == 5:
+                    exit()
+
+
+                
 
 
 
 
-        else:
-            print("Savings Account Choosen:")
-            currentBalance = int("What is your starting balance - minimun 500: ")     
-            savingsaccount = Savings(currentBalance)              
 
-            name = str(input("Choose your account name"))
+
+        # else:
+        #     print("Savings Account Choosen:")
+        #     currentBalance = int("What is your starting balance - minimun 500: ")    
+
+        #     # create Savings class instance                
+        #     savingsaccount = Savings(currentBalance)              
+
+        #     # create Person class instance
+        #     name = str(input("Choose your account name"))
+        #     user = Person(name, chequingAccount)
         
 
-    pass
 
 
-accountOne = Account("chequing", 600)
-accountTwo = Chequing(800)
-Adam = Person("Adam", accountTwo)
 
-print(Adam.account.showBalance())
-print(Adam.account.showActType())
+# accountOne = Account("chequing", 600)
+# accountTwo = Chequing(800)
+# Adam = Person("Adam", accountTwo)
 
-Adam.account.withdraw(5000)
+# print(Adam.account.showBalance())
+# print(Adam.account.showActType())
+
+# Adam.account.withdraw(5000)
