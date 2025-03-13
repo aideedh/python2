@@ -54,6 +54,7 @@ for loop in range (num, 0, -2):
     # function found trough googling
     myturtle.circle(num)
 
+# move turtle away from sphere
 myturtle.penup()
 myturtle.forward(150)
 screen.exitonclick()

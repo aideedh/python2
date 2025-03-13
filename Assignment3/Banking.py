@@ -39,18 +39,27 @@ class Account:
         self.currentBalance += amount
         print(f"${amount} Deposit Successful - Updated Balance: {self.currentBalance}")
 
+    # display info methods
+
+    def showBalance(self):
+        return self.currentBalance
+    def showActType(self):
+        return self.accountType
+
 
 class Chequing(Account):
 
     def __init__(self, currentBalance):
-        super.__init__(currentBalance)
+        super().__init__("chequing", currentBalance)
         self.overdraft = -1000
+
 
 
 class Savings(Account):
 
     def __init__(self, currentBalance):
-        super.__init__(currentBalance)
+        super().__init__("savings", currentBalance)
+        self.overdraft = -1200
 
 
     # add the profit method
@@ -60,4 +69,8 @@ class Savings(Account):
 
 
 accountOne = Account("chequing", 600)
+accountOn = Chequing()
 Adam = Person("Adam", accountOne)
+
+print(Adam.account.showBalance())
+print(Adam.account.showActType())
