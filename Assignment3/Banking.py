@@ -83,18 +83,22 @@ class Application:
         print("--------------------------")
 
         # choose account type
-        accountType = int(input("What is your accountType: 1. Chequing or 2. Savings"))
+        accountType = int(input("What is your accountType: 1. Chequing or 2. Savings: "))
         if accountType == 1 or accountType == "Chequing":
             print("Chequing Account Choosen:")
 
             # set starting balance
-            currentBalance = int("What is your starting balance - minimun 500: ")    
+            while True:
+                currentBalance = int(input("What is your starting balance - minimun 500: "))  
+                if currentBalance >= 500:
+                    break
+                print("Error: Minimum balance must be 500 or more.")  
 
             # create Chequing class instance               
             chequingAccount = Chequing(currentBalance)
 
             # create Person class instance
-            name = str(input("Choose your account name"))
+            name = input("Choose your account name: " )
             person = Person(name, chequingAccount)
 
 
@@ -102,9 +106,9 @@ class Application:
             while True:
 
                 print("What would you like to do?")
-                ans = input ("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. Exit")
+                ans = input ("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. Exit: ")
                 if ans == 1:
-                    person.account.showBalance()
+                    print(person.account.showBalance())
                     continue
                 elif ans == 2:
                     person.account.showActType()
@@ -120,7 +124,8 @@ class Application:
 
 
                 
-
+app = Application()
+app.showMenu()
 
 
 
