@@ -24,8 +24,10 @@ class Account:
 
 
     def withdraw(self, amount):
-        
+        print(" ")
         print("-Trying to Withdraw-")
+        print(" ")
+
 
         if self.currentBalance - amount < -self.overdraft:
             print(f"Sorry, your overdraft limit of (${self.overdraft}) has been exceeded")
@@ -34,15 +36,22 @@ class Account:
             print("We have increased your over draft limit by $200")
             self.overdraft += 200
             print(f"Your new limit is now {self.overdraft}")
+            print(" ")
+
 
         else:
             self.currentBalance -= amount
             print(f"Withdrawl Successful - Updated Balance {self.currentBalance}")
+            print(" ")
+
 
 
     def deposit(self, amount):
         self.currentBalance += amount
+        print(" ")
         print(f"${amount} Deposit Successful - Updated Balance: {self.currentBalance}")
+        print(" ")
+
 
     # display info methods
 
@@ -56,13 +65,13 @@ class Chequing(Account):
 
     def __init__(self, currentBalance):
         super().__init__("chequing", currentBalance)
-        self.overdraft = -1000
+        self.overdraft = 1000
 
 class Savings(Account):
 
     def __init__(self, currentBalance):
         super().__init__("savings", currentBalance)
-        self.overdraft = -1200
+        self.overdraft = 1200
 
 
     # add the profit method
@@ -85,6 +94,8 @@ class Application:
         # choose account type
         accountType = int(input("What is your accountType: 1. Chequing or 2. Savings: "))
         print(" ")
+
+        # Chequing Account
 
         if accountType == 1 or accountType == "Chequing":
             print("Chequing Account Choosen:")
@@ -122,40 +133,75 @@ class Application:
                     print(" ")
                     continue
                 elif ans == 3:
-                    ans = int(input("How much do you want to withdraw?"))
+                    ans = int(input("How much do you want to withdraw? "))
                     person.account.withdraw(ans)
                     continue
                 elif ans == 4:
-                    ans = int(input("How much do you want to deposit?"))
+                    ans = int(input("How much do you want to deposit? "))
                     person.account.deposit(ans)
                     continue
                 elif ans == 5:
                     print("exiting app thank you!")
                     exit()
 
+        # Savings Account
 
-                
+        else:
+            print("Savings Account Choosen:")
+
+            # set starting balance
+            while True:
+                currentBalance = int(input("What is your starting balance - minimun 500: "))  
+                if currentBalance >= 500:
+                    break
+                print("Error: Minimum balance must be 500 or more.")   
+
+            # create Savings class instance                
+            savingsaccount = Savings(currentBalance)              
+
+            # create Person class instance
+            name = input("Choose your account name: " )
+            person = Person(name, savingsaccount)
+
+
+            # do banking stuff
+            print(" ")
+            print(f"Hello {person.name}")
+            print("What would you like to do?")
+
+            while True:
+
+                ans = int(input("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. 10 deposits 6. Exit: "))
+                print(" ")
+                if ans == 1:
+                    print(f"Account balance: {person.account.showBalance()}")
+                    print(" ")
+                    continue
+                elif ans == 2:
+                    print(f"Account Type: {person.account.showActType()}")
+                    print(" ")
+                    continue
+                elif ans == 3:
+                    ans = int(input("How much do you want to withdraw? "))
+                    person.account.withdraw(ans)
+                    continue
+                elif ans == 4:
+                    ans = int(input("How much do you want to deposit? "))
+                    person.account.deposit(ans)
+                    continue
+                elif ans == 5
+                elif ans == 6:
+                    print("exiting app thank you!")
+                    exit()
+        
+
+# instance of Application
+
 app = Application()
 app.showMenu()
 
 
-
-
-
-        # else:
-        #     print("Savings Account Choosen:")
-        #     currentBalance = int("What is your starting balance - minimun 500: ")    
-
-        #     # create Savings class instance                
-        #     savingsaccount = Savings(currentBalance)              
-
-        #     # create Person class instance
-        #     name = str(input("Choose your account name"))
-        #     user = Person(name, chequingAccount)
-        
-
-
-
+# not needed
 
 # accountOne = Account("chequing", 600)
 # accountTwo = Chequing(800)
