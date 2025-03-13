@@ -84,6 +84,8 @@ class Application:
 
         # choose account type
         accountType = int(input("What is your accountType: 1. Chequing or 2. Savings: "))
+        print(" ")
+
         if accountType == 1 or accountType == "Chequing":
             print("Chequing Account Choosen:")
 
@@ -103,23 +105,32 @@ class Application:
 
 
             # do banking stuff
+            print(" ")
+            print(f"Hello {person.name}")
+            print("What would you like to do?")
+
             while True:
 
-                print("What would you like to do?")
-                ans = input ("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. Exit: ")
+                ans = int(input("1. Show Balnce 2. Show ActType 3. withdraw 4. Deposit 5. Exit: "))
+                print(" ")
                 if ans == 1:
-                    print(person.account.showBalance())
+                    print(f"Account balance: {person.account.showBalance()}")
+                    print(" ")
                     continue
                 elif ans == 2:
-                    person.account.showActType()
+                    print(f"Account Type: {person.account.showActType()}")
+                    print(" ")
                     continue
                 elif ans == 3:
-                    person.account.withdraw()
+                    ans = int(input("How much do you want to withdraw?"))
+                    person.account.withdraw(ans)
                     continue
                 elif ans == 4:
-                    person.account.deposit()
+                    ans = int(input("How much do you want to deposit?"))
+                    person.account.deposit(ans)
                     continue
                 elif ans == 5:
+                    print("exiting app thank you!")
                     exit()
 
 
