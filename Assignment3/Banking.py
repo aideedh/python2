@@ -28,8 +28,13 @@ class Account:
         print("-Trying to Withdraw-")
 
         if self.currentBalance - amount < -self.overdraft:
-            print("Sorry, your overdraft limit {self.overdraft} has been exceeded")
+            print(f"Sorry, your overdraft limit of (${self.overdraft}) has been exceeded")
+            print(f"Your current balance is :{self.currentBalance}")
+            print("-------------------------------------")
+            print("We have increased your over draft limit by $200")
             self.overdraft += 200
+            print(f"Your new limit is now {self.overdraft}")
+
         else:
             self.currentBalance -= amount
             print(f"Withdrawl Successful - Updated Balance {self.currentBalance}")
@@ -53,8 +58,6 @@ class Chequing(Account):
         super().__init__("chequing", currentBalance)
         self.overdraft = -1000
 
-
-
 class Savings(Account):
 
     def __init__(self, currentBalance):
@@ -68,9 +71,46 @@ class Savings(Account):
         self.currentBalance += profit
 
 
+
+class Application:
+
+    # this will be the interaction between person and the bank 
+
+    def showMenu(self):
+
+        print("--------------------------")
+        print("Welcme to the banking app!")
+        print("--------------------------")
+
+        # get all info for Account Type 
+
+        accountType = int(input("What is your accountType: 1. Chequing or 2. Savings"))
+        if accountType == 1 or accountType == "Chequing":
+            print("Chequing Account Choosen:")
+            currentBalance = int("What is your starting balance - minimun 500: ")                   
+            chequingAccount = Chequing(currentBalance)
+
+            name = str(input("Choose your account name"))
+
+
+
+
+        else:
+            print("Savings Account Choosen:")
+            currentBalance = int("What is your starting balance - minimun 500: ")     
+            savingsaccount = Savings(currentBalance)              
+
+            name = str(input("Choose your account name"))
+        
+
+    pass
+
+
 accountOne = Account("chequing", 600)
-accountOn = Chequing()
-Adam = Person("Adam", accountOne)
+accountTwo = Chequing(800)
+Adam = Person("Adam", accountTwo)
 
 print(Adam.account.showBalance())
 print(Adam.account.showActType())
+
+Adam.account.withdraw(5000)
