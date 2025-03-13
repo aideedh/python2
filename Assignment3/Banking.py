@@ -48,9 +48,7 @@ class Account:
 
     def deposit(self, amount):
         self.currentBalance += amount
-        print(" ")
         print(f"${amount} Deposit Successful - Updated Balance: {self.currentBalance}")
-        print(" ")
 
 
     # display info methods
@@ -189,7 +187,25 @@ class Application:
                     ans = int(input("How much do you want to deposit? "))
                     person.account.deposit(ans)
                     continue
-                elif ans == 5
+                elif ans == 5:
+
+                    import random
+                    print("- Deposting 10 random amounts -")
+                    print("----------------------------------------")
+
+                    # 10 random deposits
+                    for loop in range (1, 11):
+                        amount = random.randint(1,10000)
+                        person.account.deposit(amount)
+                        print("----------------------------------------")
+                    print(f"Account balance Now: ${person.account.showBalance()}") 
+                    print("----------------------------------------")
+                    print("Thank you for 10 deposits into Savings Account!")
+                    print("-10% profit added to your balance-")
+                    person.account.profit()
+                    print("----------------------------------------")
+                    print(f"Final account balance: ${person.account.showBalance()}") 
+                    print(" ")
                 elif ans == 6:
                     print("exiting app thank you!")
                     exit()
