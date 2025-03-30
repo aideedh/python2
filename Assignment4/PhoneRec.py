@@ -27,11 +27,19 @@ Name the Python file "PhoneRec.py" and mark it as Version 1 in your Git history.
 
 
 # first need to create the dictionary 
+# note the second part (values) is a tuple
 
 PhoneBook = {
     'John': ('209 Trafalgar Road', '905-666-7777'),  
-    'Rosie': ('1439 Trafalgar Road', '487-423-7721')  
+    'Rosie': ('1439 Trafalgar Road', '487-423-7721'),
+    'Alex': ('12 Lakeshore Blvd', '416-555-1234'),
+    'Samantha': ('300 King Street West', '647-888-9999'),
+    'David': ('55 Bloor Street East', '905-222-1111'),
+    'Emily': ('789 Queen Street', '289-333-4444'),
+    'Michael': ('99 Dundas Street West', '416-777-8888'),
+    'Olivia': ('150 Front Street', '437-555-0000')
 }
+
 
 # create file
 
@@ -47,10 +55,12 @@ with open("SpeedDial1.txt", "w") as file:
     
     for key, value in PhoneBook.items():
 
+        # values is a tuple so need to access each seperetly
         address = value[0]
         phone = value[1]
 
         # file only takes 1 arg so need to use f
+        # formatted like the dictonary
         file.write(f"{key}: ({address}, {phone}) \n")
 
 
