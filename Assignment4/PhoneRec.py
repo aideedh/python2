@@ -51,7 +51,7 @@ with open("SpeedDial1.txt", "w") as file:
         phone = value[1]
 
         # file only takes 1 arg so need to use f
-        file.write(f"{key}, {address}, {phone}")
+        file.write(f"{key}: ({address}, {phone}) \n")
 
 
 
