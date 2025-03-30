@@ -33,15 +33,32 @@ PhoneBook = {
     'Rosie': ('1439 Trafalgar Road', '487-423-7721')  
 }
 
-
 # create file
-with open("SpeedDial1.txt", "w") as file:   
-    # file.write(PhoneBook)
-    for key, (value1, value2) in PhoneBook.items():
-        file.write(key, (value1, value2))
 
+# ---------------------------------------------------------------------------
+# This method is using tuple unpacking not learned in class so i wont use it
+# ---------------------------------------------------------------------------
+# with open("SpeedDial1.txt", "w") as file:   
+#     for key, (value1, value2) in PhoneBook.items():
+#         file.write(f"{key}, {value1}, {value2} \n")
+# ---------------------------------------------------------------------------
+
+with open("SpeedDial1.txt", "w") as file:
+    
+    for key, value in PhoneBook.items():
+
+        address = value[0]
+        phone = value[1]
+
+        # file only takes 1 arg so need to use f
+        file.write(f"{key}, {address}, {phone}")
+
+
+
+# print message to confirm file created
 print("File created ... .. .")
 
+# read all lines in the file
 with open("SpeedDial1.txt", "r") as file:
     info = file.read()
     print(info)
