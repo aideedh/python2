@@ -16,5 +16,8 @@ PhoneBook = {
 
 # create file
 with open("speeddial2.json", "w") as file:
-    yes = json.dumps(PhoneBook)
-    file.write(yes)
+    json.dump(PhoneBook, file, indent=4)
+
+with open("speeddial2.json", "r") as file:
+    info = file.read()
+    print(info)
