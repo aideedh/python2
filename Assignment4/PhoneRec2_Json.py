@@ -16,8 +16,10 @@ PhoneBook = {
 
 # create file
 with open("speeddial2.json", "w") as file:
+    # indent will make it formated line by line instead of string
     json.dump(PhoneBook, file, indent=4)
 
+# read file
 with open("speeddial2.json", "r") as file:
     info = file.read()
     print(info)
