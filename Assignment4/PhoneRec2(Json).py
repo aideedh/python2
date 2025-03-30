@@ -1,4 +1,4 @@
-
+import json
 
 # Dictionary 
 
@@ -12,3 +12,9 @@ PhoneBook = {
     'Michael': ('99 Dundas Street West', '416-777-8888'),
     'Olivia': ('150 Front Street', '437-555-0000')
 }
+
+
+# create file
+with open("speeddial2.json", "w") as file:
+    yes = json.dumps(PhoneBook)
+    file.write(yes)
