@@ -17,9 +17,12 @@ Name the Python file "PhoneRec.py" and mark it as Version 1 in your Git history.
 
 # refrence:
 # https://www.youtube.com/watch?v=1IYrmTTKOoI -  WRITE FILES using Python! (.txt, .json, .csv) ✍ 
-# https://www.youtube.com/watch?v=MZZSMaEAC2g - Python dictionaries are easy 📙
 # https://www.youtube.com/watch?v=Uh2ebFW8OYM - Python Tutorial: File Objects - Reading and Writing to Files
+
+# useful:
+# https://www.youtube.com/watch?v=MZZSMaEAC2g - Python dictionaries are easy 📙  min 5:00
 # https://www.geeksforgeeks.org/write-a-dictionary-to-a-file-in-python/ 
+# https://www.geeksforgeeks.org/how-to-print-a-dictionary-in-python/
 
 
 
@@ -30,9 +33,12 @@ PhoneBook = {
     'Rosie': ('1439 Trafalgar Road', '487-423-7721')  
 }
 
+
 # create file
 with open("SpeedDial1.txt", "w") as file:   
-    file.write(str(PhoneBook))
+    # file.write(PhoneBook)
+    for key, (value1, value2) in PhoneBook.items():
+        file.write(key, (value1, value2))
 
 print("File created ... .. .")
 
