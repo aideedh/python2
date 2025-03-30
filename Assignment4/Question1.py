@@ -7,7 +7,14 @@ Each numeric value in the output should be right-aligned within a 6-character sp
 Additionally, provide a flowchart that illustrates your program's logic.
 '''
 
+# refrence:
+# https://www.youtube.com/watch?v=1IYrmTTKOoI
+
 import csv
 
+with open("ApplicationLog.csv","r") as file:
+    reader =csv.reader(file)
+    for row in reader:
+        print(row)
 
 
