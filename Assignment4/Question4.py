@@ -13,7 +13,7 @@ class IPException(Exception):
 
 
 
-class program:
+class Program:
 
     # user interactions
     def user(self):
@@ -22,9 +22,12 @@ class program:
         credentials = []
 
         # get user inputs
+        print(" ")
+        print("Please enter your information:")
         username = input("What is your username: ")
         password = input("What is your password? ")
         ip = input("What is your ip? ")
+        print(" ")
 
 
         # raise exception
@@ -41,8 +44,16 @@ class program:
         # - this will be updated every time
         credentials.append(info)
 
-        with open("SessionLogger.txt", "w") as file:
-            file.writelines(credentials)
+
+        # write to the file
+        with open("SessionLogger.txt", "a") as file:
+            for info in credentials:
+                # this will format the informtion given in the desired format
+                file.write(f'["{info[0]}","{info[1]}","{info[2]}"]\n')
+
+        print("Editing file ... .. .")
+        print("Process completed .. .")
+        print("File has been updated!")
 
     # check for ip address 
     def validIp(self, ipAddress):
@@ -72,3 +83,6 @@ class program:
             except:
                 return False
                 
+
+user = Program()
+user.user()
