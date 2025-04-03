@@ -26,7 +26,10 @@ class program:
         password = input("What is your password? ")
         ip = input("What is your ip? ")
 
-
+        # raise exception
+        # - only if the ip validaton is met
+        if validIp(ip) == False:
+            raise IPException(ip)
 
 
         # put user inputs into list
@@ -39,7 +42,12 @@ class program:
 
     # check for ip address 
     def validIp(ipAddress):
-        pass
+
+        # split the segments in the ip address
+        ipSegments = ipAddress.split(".")
+        
+        if len(ipSegments) != 4:
+            return False
 
 
         
