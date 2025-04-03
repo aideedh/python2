@@ -16,7 +16,7 @@ class IPException(Exception):
 class program:
 
     # user interactions
-    def user():
+    def user(self):
 
         # original list
         credentials = []
@@ -26,9 +26,10 @@ class program:
         password = input("What is your password? ")
         ip = input("What is your ip? ")
 
+
         # raise exception
-        # - only if the ip validaton is met
-        if validIp(ip) == False:
+        # - only if the ip validaton check is triggured
+        if self.validIp(ip) == False:
             raise IPException(ip)
 
 
@@ -40,8 +41,11 @@ class program:
         # - this will be updated every time
         credentials.append(info)
 
+        with open("SessionLogger.txt", "w") as file:
+            file.writelines(credentials)
+
     # check for ip address 
-    def validIp(ipAddress):
+    def validIp(self, ipAddress):
 
         # split the segments in the ip address
         # - seprated by "."
@@ -68,5 +72,3 @@ class program:
             except:
                 return False
                 
-        
-
