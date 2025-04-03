@@ -44,11 +44,29 @@ class program:
     def validIp(ipAddress):
 
         # split the segments in the ip address
+        # - seprated by "."
         ipSegments = ipAddress.split(".")
-        
+
+        #----------------
+        # ALL ip checks -
+        #----------------------------------------------------------------------------------
+        # If any of these are triggured it will return false and raise the custom exception
+        #----------------------------------------------------------------------------------
+
+        # check for if the segemnts in the ip address is 4
         if len(ipSegments) != 4:
             return False
 
-
+        # check if segemnts in ip address is from 0 to 255
+        for segment in ipSegments:
+            try:
+                num = int(segment)
+                if num < 0 or num > 255:
+                    return False
+                
+        # raise custom error all else
+            except:
+                return False
+                
         
 
