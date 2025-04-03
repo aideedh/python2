@@ -12,12 +12,31 @@ Additionally, provide a flowchart that illustrates your program's logic.
 
 import csv
 
+# this will open and read the file
 with open("ApplicationLog.csv","r") as file:
     reader = csv.reader(file)
     header = next(reader)
 
+# check the rows
     for row in reader:
-        if "Universal Print" in row:
-            print(row[1])
-    
+
+        # try to check 
+        try:
+            if row[2] == "Universal Print":
+
+                # split the info
+                datetime = row[1].split()
+                date = datetime[0].split("-")  
+                clock = datetime[1].split(":")
+
+                # format the info
+                hourSecond = f"{clock[0]}:{clock[2]}"
+                formattedDate = f"{date[2]}:{date[1]}:{date[0]}"
+
+                # display the info
+                print(row[2], f"{hourSecond} \t {formattedDate}")
+
+        # if i dont have this it will crash 
+        except IndexError:
+            pass
 
