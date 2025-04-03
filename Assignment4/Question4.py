@@ -15,6 +15,7 @@ class IPException(Exception):
 
 class program:
 
+
     def user():
 
         credentials = []
@@ -22,17 +23,21 @@ class program:
 
         username = input("What is your username: ")
         password = input("What is your password? ")
-
         ip = input("What is your ip? ")
 
+        
 
-        credentials = [username, password, ip]
 
+        # put user inputs into list
+        info = [username, password, ip]
 
-        pass
+        # pass the list into original list of information
+        credentials.append(info)
+
 
     def validIp(ipAddress):
         pass
+
 
         
 
