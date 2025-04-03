@@ -11,3 +11,14 @@ class IPException(Exception):
         super().__init__(f"Invalid IP address: {ipAddress}")
         self.ipAddress = ipAddress
 
+
+
+class program:
+
+    def user():
+        pass
+
+    def validIp(ipAddress):
+
+        
+
