@@ -13,8 +13,11 @@ Additionally, provide a flowchart that illustrates your program's logic.
 import csv
 
 with open("ApplicationLog.csv","r") as file:
-    reader =csv.reader(file)
-    # for row in reader:
-    #     print(row)
+    reader = csv.reader(file)
+    header = next(reader)
 
+    for row in reader:
+        if "Universal Print" in row:
+            print(row[1])
+    
 

@@ -18,6 +18,7 @@ Name the Python file "PhoneRec.py" and mark it as Version 1 in your Git history.
 # refrence:
 # https://www.youtube.com/watch?v=1IYrmTTKOoI -  WRITE FILES using Python! (.txt, .json, .csv) ✍ 
 # https://www.youtube.com/watch?v=Uh2ebFW8OYM - Python Tutorial: File Objects - Reading and Writing to Files
+# https://www.youtube.com/watch?v=gOMW_n2-2Mw&t=74s - Python lists, sets, and tuples explained 🍍
 
 # useful:
 # https://www.youtube.com/watch?v=MZZSMaEAC2g - Python dictionaries are easy 📙  min 5:00

@@ -13,6 +13,8 @@ PhoneBook = {
     'Olivia': ('150 Front Street', '437-555-0000')
 }
 
+# Refrences:
+# https://www.w3schools.com/python/python_json.asp
 
 # create file
 with open("speeddial2.json", "w") as file:
